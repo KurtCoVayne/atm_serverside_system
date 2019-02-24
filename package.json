@@ -6,7 +6,18 @@
   "scripts": {
     "start": "node ./src/bin/www"
   },
-  "keywords": ["NodeJS", "Javascript", "Express", "Handlebars", "passport", "mongodb", "mongoose", "atm", "economy", "app"],
+  "keywords": [
+    "NodeJS",
+    "Javascript",
+    "Express",
+    "Handlebars",
+    "passport",
+    "mongodb",
+    "mongoose",
+    "atm",
+    "economy",
+    "app"
+  ],
   "author": "KurtCoVayne4-John Alejandro Gonzalez",
   "license": "ISC",
   "dependencies": {

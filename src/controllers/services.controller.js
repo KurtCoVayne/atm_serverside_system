@@ -48,7 +48,7 @@ serviceCtrl.MTRS = async (req, res) => { //MAKE TRANSACTION
     }
 }
 serviceCtrl.RTRS = async (req, res) => { //RECEIVE TRANSACTION
-    const { recd, eUs, rUs, trs, mnt } = req.body
+    let { recd, eUs, rUs, trs, mnt } = req.body
     if (recd == 'true') {
         req.flash('error_msg', 'Esta transacción ya fue reclamada.')
         res.redirect('/services/operations/rtrs')
@@ -123,7 +123,7 @@ serviceCtrl.payCredits = async (req, res) => {
         await Debt.findByIdAndDelete(debtId)
         return res.redirect('/services/wallet/')
     }
-    req.flash('success_msg', 'Se añadieron ' + payValue + '$ a tu deuda de' + debtAmount)
+    req.flash('success_msg', 'Se añadieron ' + payValue + '$ a tu deuda de ' + debtAmount)
     res.render('u_services/pay-credits', { debt })
 }
 module.exports = serviceCtrl;
