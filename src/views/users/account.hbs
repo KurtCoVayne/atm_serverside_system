@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="container float-left">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>Información de tu cuenta </h4>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    
+                    <h6>ID:</h6>{{user.id}}
+                    <h6>Nombre:</h6>{{user.name}}
+                    <h6>Correo:</h6>{{user.email}}
+                    <h6>Balance:</h6>{{user.balance}}
+                    <hr>
+                    <h6>Fecha de creación:</h6>{{user.date}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="container float-right">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>Configuración</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-outline-primary mt-2 mb-2 btn-block" href="/users/account/config/name"><i class="fas fa-align-justify"></i>
+                        Cambiar nombre</a><br>
+                    <a class="btn btn-outline-primary mt-2 mb-2 btn-block" href="/users/account/config/mail"><i class="far fa-envelope"></i>
+                        Cambiar correo</a><br>
+                    <a class="btn btn-outline-primary mt-2 mb-2 btn-block" href="/users/account/config/pass"><i class="fas fa-key"></i>
+                        Cambiar contraseña</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

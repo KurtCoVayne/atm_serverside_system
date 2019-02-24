@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="container mb-2">
+        <h1 class="hS">Hola {{user.name}} Este es el historial de transacciones que has recibido</h1>
+    </div>
+    {{#each rtrs}}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                    Enviado por {{this.envN}}
+                </h4>
+                <p>
+                    Id transacción: {{this.id}} <br>
+                    <hr>
+                    Mensaje: {{msg}} <br>
+                    Monto enviado: {{mnt}}<br>
+                    {{#if this.recd}}
+                    Estado: Reclamada <br>
+                    {{else}}
+                    Estado: Sin reclamar <br>
+                    {{/if}}
+                    <hr>
+                    Fecha de envio: <br>{{date}}<br>
+
+                    {{#if this.rdate}}
+                    Fecha en la que fue recibida: <br>
+                    {{rdate}}
+                    {{/if}}
+                </p>
+                <form action="/services/operations/rtrs" method="post">
+                    <input type="hidden" name="trs" value="{{this.id}}" />
+                    <input type="hidden" name="eUs" value="{{this.envUs}}" />
+                    <input type="hidden" name="rUs" value="{{this.recUs}}" />
+                    <input type="hidden" name="mnt" value="{{this.mnt}}">
+                    <div class="form-group">
+                        {{#if this.recd}}
+                        <input type="hidden" name="recd" value="true" />
+                        <button class="btn btn-outline-secondary btn-block btn-sm mt-4" type="submit">La transacción ya
+                            fue recibida</button>
+                </form>
+                <form method="POST" action="/services/operations/rtrs/{{this.id}}">
+                    <button class="btn btn-outline-danger btn-block btn-sm mt-2 btn-td"><i class="fas fa-times"></i>
+                        Eliminar transaccion</button>
+                    {{else}}
+                    <input type="hidden" name="recd" value="false" />
+                    <button class="btn btn-success btn-block btn-sm mt-4" type="submit">Recibir transacción</button>
+                    {{/if}}
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>

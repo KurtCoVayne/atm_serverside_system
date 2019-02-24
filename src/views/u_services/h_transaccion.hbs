@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="container mb-2">
+        <h1 class="hS">Hola {{user.name}} Este es el historial de transacciones que has realizado</h1>
+    </div>
+    {{#each rtrs}}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                    Enviado por {{this.envN}}
+                </h4>
+                <p>
+                    Id transacción: {{this.id}} <br>
+                    <hr>
+                    Mensaje: {{msg}} <br>
+                    Monto enviado: {{mnt}}<br>
+                    {{#if this.recd}}
+                    Estado: Reclamada <br>
+                    {{else}}
+                    Estado: Sin reclamar <br>
+                    {{/if}}
+                    <hr>
+                    Fecha de envio: <br>{{date}}<br>
+
+                    {{#if this.rdate}}
+                    Fecha en la que fue recibida: <br>
+                    {{rdate}}
+                    {{/if}}
+                </p>
+                {{#if this.recd}}
+                <form method="POST" action="/services/operations/htrs/{{this.id}}">
+                    <button class="btn btn-outline-danger btn-block btn-sm mt-2 btn-td"><i class="fas fa-times"></i>
+                        Eliminar transaccion</button>
+                </form>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

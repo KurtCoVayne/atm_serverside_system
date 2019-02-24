@@ -1,0 +1,33 @@
+<div class="row mt-4">
+    <div class="col-md-4 mx-auto">
+        <form action="/services/operations/htrs">
+            <button class="btn btn-outline-secondary mb-2 btn-block" type="submit"><i class="fas fa-history"></i>
+                Historial</button>
+        </form>
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Formulario de transacción</h3>
+            </div>
+            <div class="card-body">
+
+                <form action="/services/operations/trs" method="POST">
+                    <div class="form-group">
+                        <input type="email" name="d_email" placeholder="Correo del destinatario" class="form-control"
+                            value="{{d_email}}" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="mnt" placeholder="Monto de la transacción" class="form-control"
+                            value="{{mnt}}" min="100" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="msg" rows="5" placeholder="Enviale un mensaje" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

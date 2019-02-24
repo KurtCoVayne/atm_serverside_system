@@ -1,0 +1,19 @@
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show mt-4  ml-4 mr-4" role="alert" id="error-alert">
+  <strong>Ups!</strong> {{error}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+<div class="jumbotron">
+  <h1 class="display-4">Bienvenido a mi Banco!</h1>
+  <p class="lead">
+    Aplicación de balances monetarios como un "banco" con sistema de Login, como una red social
+  </p>
+  <hr class="my-4">
+  Para usar las funcionalidades de esta app, tienes que <a href="/users/signup">registrarte aqui.</a> O si ya posees una
+  cuenta <a href="/users/login">ingresa aquí</a>.
+  <br>
+  <a class="btn btn-primary btn-lg p-4 mt-4" href="/about" role="button">funcionalidades</a>
+</div>

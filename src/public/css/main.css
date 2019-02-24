@@ -1,0 +1,29 @@
+.pcc {
+    background-color: #1c3643;
+    align-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.top {
+    align-content: center;
+    size: 150%
+}
+
+.gradient{
+    background: #114357;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F29492, #114357);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.logo {
+    width: 30%;
+}
+
+.aligner{
+    white-space: nowrap;
+    display: inline;
+}

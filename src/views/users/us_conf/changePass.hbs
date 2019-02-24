@@ -1,0 +1,24 @@
+<div class="row mt-4">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>Cambiar Contraseña</h3>
+            </div>
+            <div class="card-body">
+                <form action="/users/account/config/pass" method="POST" autocomplete="off">
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="a_pass" placeholder="Contraseña actual" required >
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="n_pass" placeholder="Nueva contraseña" required >
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="cn_pass" placeholder="Confirmar contraseña" required>
+                    </div>
+                        <button type="submit" class="btn btn-primary btn-block">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
