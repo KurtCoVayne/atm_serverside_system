@@ -45,11 +45,11 @@ app.use((req, res, next) => {
 app.use(require('./routes/index'));
 app.use('/users/', require('./routes/users'))
 app.use('/services/', require('./routes/services'))
-app.use(function (req, res, next) {
-  const errors = [];
-  errors.push({ text: 'Lo siento, pero la pagina que solicitas no existe' })
-  res.status(404).render('index', { errors });
-});
+// app.use(function (req, res, next) {
+//   const errors = [];
+//   errors.push({ text: 'Lo siento, pero la pagina que solicitas no existe' })
+//   res.status(404).render('index', { errors });
+// });
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
 
