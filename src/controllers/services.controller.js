@@ -49,11 +49,12 @@ serviceCtrl.MTRS = async (req, res) => { //MAKE TRANSACTION
 }
 serviceCtrl.RTRS = async (req, res) => { //RECEIVE TRANSACTION
     let { recd, eUs, rUs, trs, mnt } = req.body
+    mnt = parseInt(mnt)
     if (recd == 'true') {
         req.flash('error_msg', 'Esta transacción ya fue reclamada.')
         res.redirect('/services/operations/rtrs')
     } else {
-        const env = await User.findById(eUs)
+        const env = req.user;
         const rec = await User.findById(rUs)
         const Ef_balance = env.balance - parseInt(mnt);
         const Rf_balance = parseInt(rec.balance) + mnt
