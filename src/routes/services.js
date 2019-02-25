@@ -57,5 +57,8 @@ router.get('/wallet/pay-credits', isAuthenticated, async(req, res ) => {
     res.render('u_services/pay-credits', {debt})
 })
 router.post('/wallet/pay-credits', isAuthenticated, serviceCtrl.payCredits)
-
+router.get('/chat', isAuthenticated, async(req, res) =>{
+    const user = req.user
+    res.render('u_services/chat', {user})
+})
 module.exports = router;

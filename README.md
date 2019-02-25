@@ -16,6 +16,7 @@ Resultado final del proyecto: https://serverside-bank-system.herokuapp.com/
 ### Versiones disponibles
 
 Todo el sistema de versiones está hecho(semanticamente) bajo mi criterio de que es una versión y que no. Para las versiones disponibles [Versiones del repositorio](https://github.com/KurtCoVayne/bank_serverside_system/tags).
+* **Detalles de la ultima version(1.2.0)** - *Fue añadido un sistema de chat disponible para los usuarios registrados, que incluye también un sistema de mensajes privados con el comando /w*
 
 ## Autores:
 * **John Alejandro Gonzalez** - *Trabajo completo* - [LinkedIn](https://www.linkedin.com/in/j84486b177/)
@@ -32,4 +33,4 @@ aparezcan en todas las copias.
 ## Agradecimientos
 
 Este proyecto fue posible gracias a la cantida de documentación presente en la cantidad de librerias usadas en este.
-Este proyecto se hace con una intención **autodidacta** de aprender el uso de las tecnologias mencionadas anteriormente. También como una forma de demostrar el uso de los sistemas informaticos para revolucionar la economia de los paises latinoamericanos, y como se debe apuntar al futuro de la economia mundial.
+Este proyecto se hace con una intención *autodidacta* de aprender el uso de las tecnologias mencionadas anteriormente. También como una forma de demostrar el uso de los sistemas informaticos para revolucionar la economia de los paises latinoamericanos, y como se debe apuntar al futuro de la economia mundial.

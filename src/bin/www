@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const socketio = require('socket.io')
 /**
  * Module dependencies.
  */
@@ -88,3 +88,7 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+//Socket io addon
+const io = socketio.listen(server)
+
+require('../sockets')(io);

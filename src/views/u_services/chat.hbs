@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="/css/chat.css">
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/chat.js"></script>
+
+{{!-- <nav class="navbar navbar-light bg-success">
+    <a class="navbar-brand mx-auto" href="/">CHAT</a>
+  </nav> --}}
+<div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+  <div class="card-header">
+    <h3>Ingresar al chat</h3>
+  </div>
+  <p id="nickError"></p>
+  <div class="card-body">
+    <form id="nickForm">
+      <h4>Entrar como:</h4>
+      <input type="text" id="fake" class="btn btn-danger btn-block btn-lg" placeholder="Nick name" value="{{user.name}}"
+        disabled required>
+      <input type="hidden" id="nickName" class="form-control" placeholder="Nick name" value="{{user.name}}" disabled
+        required>
+      <hr>
+      <button type="submit" class="btn btn-warning btn-block mt-2">
+        <i class="fas fa-location-arrow"></i>Entrar!
+      </button>
+    </form>
+  </div>
+</div>
+<div class="container" id="contentWrap">
+  <div class="row mt-5">
+
+    <div class="col-md-6 offset-md-1">
+      <!-- CHAT CONTAINER -->
+      <div class="card">
+        <!-- CARD HEADER-->
+        <div class="card-header">
+          <h4>Chat publico</h3>
+        </div>
+
+        <!-- CARD BODY-->
+        <div id="chat" class="card-body"></div>
+
+        <!-- CARD FOOTER -->
+        <form id="message-form" class="card-footer">
+          <div class="input-group">
+            <input type="text" id="message" class="form-control" maxlength="256" placeholder="Tu mensaje" required />
+            <div class="input-group-append">
+              <button class="btn btn-warning">
+                <i class="fas fa-location-arrow"></i> Enviar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- USERS SECTION-->
+    <div class="card">
+      <div class="card-header">
+        <h3>Usuarios activos</h3>
+      </div>
+      <div class="card-body">
+        <div id="usernames"></div>
+      </div>
+    </div>
+  </div>
+<p>Para enviar mensajes privados usa </i>/w *Nombre* *Mensaje*</i></p>
+</div>

@@ -1,6 +1,6 @@
 {
   "name": "atm_ss",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Aplicación bancaría creada como un proyecto personal que posee sistema de Cajero Automatico(Repartir x cantidad de dinero con la menor cantidad de billetes) y sistema de transacciones y de creditos o prestamos entre usuarios solo con usar su correo, también un sistema de balance personal y tablas.",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,8 @@
     "express-session": "^1.15.6",
     "mongoose": "^5.4.2",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
