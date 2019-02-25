@@ -53,7 +53,7 @@ $(function () {
         displayMessage(data)
     });
     socket.on('load-old-messages', data => {
-        for (let i = data.length; i > -1; i--) {
+        for (let i = data.length - 1; i > 0; i--) {
             displayMessage(data[i])
         }
     })
