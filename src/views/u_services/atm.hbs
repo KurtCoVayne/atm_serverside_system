@@ -1,32 +1,31 @@
+<link rel="stylesheet" href="atm.css">
 <div class="card">
-  <div class="card-header">
-    <h2>Hola! {{user.name}} y bienvenido a los servicios bancarios que Banco John te ofrece</h2>
+  <div class="card-header d-flex">
+    <h6 class="display-5">Hola! {{user.name}} y bienvenido a los servicios bancarios que Banco John te ofrece</h2>
   </div>
   <div class="card-body">
-    <h6 class="text-left ml-4"><em>Cajero Automatico</em></h6>
-    <img src="/img/cajero.gif" class="rounded m-4 float-left" alt="Logo">
-    <form action="/services/atm" method="POST">
-      <div class="row">
-        <div class="col ">
-          <div class="form-group">
-            <input type="number" class="form-control" name="m_extraccion" placeholder="Monto de extracción" min="50"
-              max="3000" required autofocus>
-            <div class="col">
-              <button type="submit" class="btn btn-primary btn-block mt-4 aligner"> Retirar dinero</button>
-            </div>
-          </div>
-        </div>
+    <div class="d-flex flex-row justify-content-center">
+      <div class="container p-0 mr-0">
+        <h6><em>Cajero Automatico</em></h6>
+        <img src="/img/cajero.gif" class="img-fluid img-thumbnail max-width:80%" alt="Cajero">
       </div>
-    </form>
+      <div class="container mb-auto mt-auto mx-auto">
+        <form action="/services/atm" method="POST">
+          <div class="form-group">
+            <input type="number" class="form-control" name="m_extraccion" placeholder="Monto de extraccion" min="50"
+              max="3000" required autofocus>
+            <button type="submit" class="btn btn-primary btn-block mt-4"> Retirar dinero</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <ul class="list">
-      <ul>
-        {{f_ext}}
-        {{#each this.ext as |billetes|}}
-        <li>El cajero te da {{billetes.cantidad}} billetes de {{billetes.valor}}$ </li>
-        {{/each}}
-        <br />
-        {{b_update}}
-      </ul>
+      {{f_ext}}
+      {{#each this.ext as |billetes|}}
+      <li>El cajero te da {{billetes.cantidad}} billetes de {{billetes.valor}}$ </li>
+      {{/each}}
+      <br />
+      {{b_updtae}}
     </ul>
   </div>
 </div>
