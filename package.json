@@ -1,6 +1,6 @@
 {
   "name": "atm_ss",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Aplicación bancaría creada como un proyecto personal que posee sistema de Cajero Automatico(Repartir x cantidad de dinero con la menor cantidad de billetes) y sistema de transacciones y de creditos o prestamos entre usuarios solo con usar su correo, también un sistema de balance personal y tablas.",
   "main": "index.js",
   "scripts": {

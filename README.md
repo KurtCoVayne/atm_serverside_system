@@ -18,7 +18,7 @@ Resultado final del proyecto: https://serverside-bank-system.herokuapp.com/
 ### Versiones disponibles.
 
 Todo el sistema de versiones está hecho(semanticamente) bajo mi criterio de que es una versión y que no. Para las versiones disponibles [Versiones del repositorio](https://github.com/KurtCoVayne/bank_serverside_system/tags).
-* **Detalles de la ultima version(1.2.0)** - *Fue añadido un sistema de chat disponible para los usuarios registrados, que incluye también un sistema de mensajes privados con el comando /w*.
+* **Detalles de la ultima version(1.2.1)** - *Mejorado el diseño responsivo en el index y en la ventana de cajero*
 
 ## Autores:
 * **John Alejandro Gonzalez** - *Trabajo completo* - [LinkedIn](https://www.linkedin.com/in/j84486b177/)
